@@ -56,7 +56,180 @@
           </div>
         </div>
       </section>
-      <section class="container form-panel"></section>
+      <section class="container form-panel">
+        <form id="form">
+          <div class="form-panel__part">
+            <div class="form-panel__part__form-title">寄送地址</div>
+            <div class="form-panel__part__content">
+              <div class="form-panel__part__content__form-row">
+                <div
+                  class="form-panel__part__content__form-row__input-appellation"
+                >
+                  <label>稱謂</label>
+                  <div class="select-wrapper">
+                    <select name="appellation" id="appellation" required>
+                      <option value="Mr." selected>先生</option>
+                      <option value="Ms.">女士</option>
+                      <option value="other">不透漏</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-panel__part__content__form-row__input-name">
+                  <label>姓名</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="請輸入姓名"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-panel__part__content__form-row">
+                <div class="form-panel__part__content__form-row__input-phone">
+                  <label>電話</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="請輸入行動電話"
+                    required
+                  />
+                </div>
+                <div class="form-panel__part__content__form-row__input-mail">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    placeholder="請輸入電子郵件"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-panel__part__content__form-row">
+                <div class="form-panel__part__content__form-row__input-city">
+                  <label>縣市</label>
+                  <div class="select-wrapper">
+                    <select name="city" id="city" required>
+                      <option value="" disabled selected>請選擇縣市</option>
+                      <option value="city">縣市</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-panel__part__content__form-row__input-address">
+                  <label>地址</label>
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder="請輸入地址"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-panel__part">
+            <div class="form-panel__part__form-title">運送方式</div>
+            <div class="form-panel__part__content">
+              <div class="form-panel__part__content__form-row d-flex">
+                <input
+                  type="radio"
+                  name="delivery"
+                  id="delivery-standard"
+                  class="input-delivery delivery-standard"
+                  value="0"
+                />
+                <label for="delivery-standard" class="">
+                  <p class="input-delivery__title">標準運送</p>
+                  <p class="input-delivery__time">約 3~7 個工作天</p>
+                </label>
+                <span class="input-delivery__price">免費</span>
+              </div>
+              <div class="form-panel__part__content__form-row d-flex">
+                <input
+                  type="radio"
+                  name="delivery"
+                  id="delivery-dhl"
+                  class="input-delivery delivery-dhl"
+                  value="0"
+                />
+                <label for="delivery-dhl" class="">
+                  <p class="input-delivery__title">DHL 貨運</p>
+                  <p class="input-delivery__time">48 小時內送達</p>
+                </label>
+                <span class="input-delivery__price">$500</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-panel__part">
+            <div class="form-panel__part__form-title">付款資訊</div>
+            <div class="form-panel__part__content">
+              <div class="form-panel__part__content__form-row">
+                <div
+                  class="form-panel__part__content__form-row__input-card-name"
+                >
+                  <label>持卡人姓名</label>
+                  <input
+                    type="text"
+                    name="card-name"
+                    id="card-name"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-panel__part__content__form-row">
+                <div
+                  class="form-panel__part__content__form-row__input-card-number"
+                >
+                  <label>卡號</label>
+                  <input
+                    type="text"
+                    pattern="\d*"
+                    maxlength="16"
+                    name="card-number"
+                    id="card-number"
+                    placeholder="1111 2222 3333 4444"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-panel__part__content__form-row d-flex">
+                <div
+                  class="
+                    form-panel__part__content__form-row__input-card-expiration
+                  "
+                >
+                  <label>有效期限</label>
+                  <input
+                    type="text"
+                    name="card-expiration"
+                    id="card-expiration"
+                    placeholder="MM/YY"
+                    required
+                  />
+                </div>
+                <div
+                  class="form-panel__part__content__form-row__input-card-code"
+                >
+                  <label>CVC / CCV </label>
+                  <input
+                    type="text"
+                    pattern="\d*"
+                    maxlength="3"
+                    name="card-code"
+                    id="card-code"
+                    placeholder="123"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
       <section class="container cart-panel"></section>
       <section class="container btn-control"></section>
     </main>
