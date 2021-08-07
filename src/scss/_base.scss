@@ -3,6 +3,9 @@ $body-bg: #ffffff;
 $body-color: #2a2a2a;
 $white: #ffffff;
 $black: #000000;
+$main-font: 'Noto Sans TC';
+$inter-font: 'Inter';
+$nunito-sans-font: 'Nunito Sans';
 
 /* 設定 margin 與 padding */
 $sizes: (
@@ -74,6 +77,7 @@ $spacers: (
 
 /* 設定 html、body、display */
 html {
+  font-family: $main-font, sans-serif;
   font-size: 16px;
   height: 100%;
 }
@@ -146,4 +150,23 @@ body {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+
+%position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin font-setting(
+  $size: 1rem,
+  $weight: normal,
+  $color: $body-color,
+  $family: $main-font
+) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $family;
 }

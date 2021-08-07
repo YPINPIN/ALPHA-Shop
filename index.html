@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALPHA-Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+TC:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
@@ -30,7 +36,30 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <section class="container stepper">
+        <div class="stepper__title">結帳</div>
+        <div class="stepper-panel">
+          <div class="stepper-panel__step checked">
+            <div class="stepper-panel__step__circle"></div>
+            <span class="stepper-panel__step__label">寄送地址</span>
+            <div class="stepper-panel__step__line"></div>
+          </div>
+          <div class="stepper-panel__step active">
+            <div class="stepper-panel__step__circle"></div>
+            <div class="stepper-panel__step__label">運送方式</div>
+            <div class="stepper-panel__step__line"></div>
+          </div>
+          <div class="stepper-panel__step">
+            <div class="stepper-panel__step__circle"></div>
+            <div class="stepper-panel__step__label">付款資訊</div>
+          </div>
+        </div>
+      </section>
+      <section class="container form-panel"></section>
+      <section class="container cart-panel"></section>
+      <section class="container btn-control"></section>
+    </main>
 
     <footer></footer>
 

@@ -7,8 +7,6 @@ header {
   height: 56px;
   text-align: center;
   background-color: $white;
-  // TODO:測試用
-  border-bottom: 1px solid #000;
 
   /*navbar*/
   .navbar {
@@ -23,10 +21,7 @@ header {
       height: 24px;
     }
     &__brand {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @extend %position-center;
       width: 136px;
       height: 24px;
     }

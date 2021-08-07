@@ -649,6 +649,7 @@ input:invalid {
 
 /* 設定 html、body、display */
 html {
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 16px;
   height: 100%;
 }
@@ -744,6 +745,13 @@ body {
   cursor: pointer;
 }
 
+.stepper-panel__step:nth-child(3) .stepper-panel__step__circle::after, .stepper-panel__step:nth-child(2) .stepper-panel__step__circle::after, .stepper-panel__step:nth-child(1) .stepper-panel__step__circle::after, header .navbar__brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*Header*/
 /*Header css*/
 header {
@@ -754,7 +762,6 @@ header {
   height: 56px;
   text-align: center;
   background-color: #ffffff;
-  border-bottom: 1px solid #000;
   /*navbar*/
 }
 header .navbar {
@@ -770,14 +777,114 @@ header .navbar__hamburger {
   height: 24px;
 }
 header .navbar__brand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 136px;
   height: 24px;
 }
 
+main {
+  margin-top: 56px;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.stepper {
+  padding-top: 16px;
+}
+.stepper__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 38px;
+}
+
+.stepper-panel {
+  margin-top: 24px;
+  display: flex;
+}
+.stepper-panel__step {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #afb1bd;
+}
+.stepper-panel__step:nth-child(1) .stepper-panel__step__circle::after {
+  content: "1";
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Nunito Sans";
+  line-height: 16px;
+}
+.stepper-panel__step:nth-child(2) .stepper-panel__step__circle::after {
+  content: "2";
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Nunito Sans";
+  line-height: 16px;
+}
+.stepper-panel__step:nth-child(3) .stepper-panel__step__circle::after {
+  content: "3";
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Nunito Sans";
+  line-height: 16px;
+}
+.stepper-panel__step:nth-child(1), .stepper-panel__step:nth-child(2) {
+  flex: 1 1;
+}
+.stepper-panel__step:nth-child(3) {
+  flex: none;
+}
+.stepper-panel__step__circle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #afb1bd;
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+}
+.stepper-panel__step__label {
+  display: none;
+}
+.stepper-panel__step__line {
+  height: 2px;
+  background-color: #afb1bd;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  left: 64px;
+}
+.stepper-panel__step.checked .stepper-panel__step__circle {
+  background-color: #2a2a2a;
+  border-color: #2a2a2a;
+}
+.stepper-panel__step.checked .stepper-panel__step__circle::after {
+  content: "✔";
+  color: #ffffff;
+}
+.stepper-panel__step.active .stepper-panel__step__circle {
+  color: #2a2a2a;
+  border-color: #2a2a2a;
+}
+.stepper-panel__step.checked .stepper-panel__step__line, .stepper-panel__step.active .stepper-panel__step__line {
+  background-color: #2a2a2a;
+}
+
+/*stepper*/
 /********* 桌機版樣式 *********/
+@media screen and (min-width: 375px) {
+  .stepper-panel__step__label {
+    margin-left: 0.5rem;
+    display: inline;
+  }
+  .stepper-panel__step__line {
+    left: calc(32px + 4.5rem + 32px);
+  }
+  .stepper-panel__step.checked .stepper-panel__step__label, .stepper-panel__step.active .stepper-panel__step__label {
+    color: #2a2a2a;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
