@@ -789,6 +789,8 @@ main {
   padding: 0 15px;
 }
 
+/*Stepper*/
+/*Steeper css*/
 .stepper {
   padding-top: 16px;
 }
@@ -872,7 +874,6 @@ main {
   background-color: #2a2a2a;
 }
 
-/*stepper*/
 /********* 桌機版樣式 *********/
 @media screen and (min-width: 375px) {
   .stepper-panel__step__label {
