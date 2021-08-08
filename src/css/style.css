@@ -1246,6 +1246,10 @@ main {
   .btn-control-panel__btn-prev, .btn-control-panel__btn-next {
     max-width: 174px;
   }
+  .btn-control-panel__btn-prev.disabled, .btn-control-panel__btn-next.disabled {
+    display: inline-block;
+    visibility: hidden;
+  }
 }
 /********* main 桌機版樣式 *********/
 @media screen and (min-width: 376px) {

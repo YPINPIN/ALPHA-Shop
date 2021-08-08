@@ -48,6 +48,10 @@
     &__btn-prev,
     &__btn-next {
       max-width: 174px;
+      &.disabled {
+        display: inline-block;
+        visibility: hidden;
+      }
     }
   }
 }

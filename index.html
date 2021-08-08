@@ -40,12 +40,12 @@
       <section class="container stepper">
         <div class="stepper__title">結帳</div>
         <div class="stepper-panel">
-          <div class="stepper-panel__step checked">
+          <div class="stepper-panel__step active">
             <div class="stepper-panel__step__circle"></div>
             <span class="stepper-panel__step__label">寄送地址</span>
             <div class="stepper-panel__step__line"></div>
           </div>
-          <div class="stepper-panel__step active">
+          <div class="stepper-panel__step ">
             <div class="stepper-panel__step__circle"></div>
             <div class="stepper-panel__step__label">運送方式</div>
             <div class="stepper-panel__step__line"></div>
@@ -141,7 +141,8 @@
                   name="delivery"
                   id="delivery-standard"
                   class="input-delivery delivery-standard"
-                  value="0"
+                  data-price="免費"
+                  data-value="0"
                 />
                 <label>
                   <p class="input-delivery__title">標準運送</p>
@@ -157,7 +158,8 @@
                   name="delivery"
                   id="delivery-dhl"
                   class="input-delivery delivery-dhl"
-                  value="0"
+                  data-price="$500"
+                  data-value="500"
                 />
                 <label>
                   <p class="input-delivery__title">DHL 貨運</p>
@@ -254,9 +256,9 @@
                 <div class="cart-panel__product-list__product__right-content__info-wrapper">
                   <div class="cart-panel__product-list__product__right-content__info-wrapper__title">破壞補丁修身牛仔褲</div>
                   <div class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper">
-                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-minus">-</button>
-                    <span class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__count">1</span>
-                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-add">+</button>
+                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-minus" id="btn-minus" data-index="0">-</button>
+                    <span class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__count product-count">1</span>
+                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-add" id="btn-add" data-index="0">+</button>
                   </div>
                 </div>
                 <div class="cart-panel__product-list__product__right-content__price">$3,999</div>
@@ -269,10 +271,10 @@
               <div class="cart-panel__product-list__product__right-content">
                 <div class="cart-panel__product-list__product__right-content__info-wrapper">
                   <div class="cart-panel__product-list__product__right-content__info-wrapper__title">刷色直筒牛仔褲</div>
-                  <div class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper">
-                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-minus">-</button>
-                    <span class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__count">1</span>
-                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-add">+</button>
+                  <div class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper" >
+                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-minus" id="btn-minus" data-index="1">-</button>
+                    <span class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__count product-count">1</span>
+                    <button class="cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-add" id="btn-add" data-index="1">+</button>
                   </div>
                 </div>
                 <div class="cart-panel__product-list__product__right-content__price">$1,299</div>
@@ -291,8 +293,8 @@
       </section>
       <section class="container btn-control">
         <div class="btn-control-panel d-flex justify-content-between align-items-center">
-          <button class="btn-control-panel__btn-prev check">上一步</button>
-          <button class="btn-control-panel__btn-next active">下一步</button>
+          <button class="btn-control-panel__btn-prev disabled" id="btn-prev">上一步</button>
+          <button class="btn-control-panel__btn-next active" id="btn-next">下一步</button>
         </div>
       </section>
     </main>
