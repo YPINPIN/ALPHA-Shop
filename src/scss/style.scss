@@ -7,6 +7,7 @@
 
 main {
   margin-top: 56px;
+  padding-bottom: 40px;
 }
 
 .container {
@@ -21,3 +22,6 @@ main {
 
 /*Cart*/
 @import './cart';
+
+/*BtnControl*/
+@import './btnControl';

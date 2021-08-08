@@ -799,6 +799,7 @@ header .navbar__brand {
 
 main {
   margin-top: 56px;
+  padding-bottom: 40px;
 }
 
 .container {
@@ -1179,6 +1180,59 @@ main {
   .cart .cart-panel__delivery, .cart .cart-panel__total {
     margin: 32px 0;
     padding-top: 32px;
+  }
+}
+/*BtnControl*/
+/*BtnControl css*/
+.btn-control {
+  margin-top: 32px;
+}
+
+.btn-control-panel {
+  padding-top: 24px;
+  border-top: 1px solid #e6e6eb;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000000;
+  font-family: "Inter";
+  line-height: 20px;
+}
+.btn-control-panel__btn-prev, .btn-control-panel__btn-next {
+  flex: 1;
+  width: 156px;
+  height: 46px;
+  border-radius: 8px;
+}
+.btn-control-panel__btn-prev.checked, .btn-control-panel__btn-next.checked {
+  color: #000000;
+  background-color: #ffffff;
+}
+.btn-control-panel__btn-prev.active, .btn-control-panel__btn-next.active {
+  color: #ffffff;
+  background-color: #f67599;
+}
+.btn-control-panel__btn-prev.disabled, .btn-control-panel__btn-next.disabled {
+  display: none;
+}
+.btn-control-panel__btn-prev {
+  margin-right: 1rem;
+}
+.btn-control-panel__btn-prev::before {
+  content: "←";
+  margin-right: 13.5px;
+}
+.btn-control-panel__btn-next {
+  margin-left: 1rem;
+}
+.btn-control-panel__btn-next::after {
+  content: "→";
+  margin-left: 13.5px;
+}
+
+/********* BtnControl 桌機版樣式 *********/
+@media screen and (min-width: 376px) {
+  .btn-control-panel__btn-prev, .btn-control-panel__btn-next {
+    max-width: 174px;
   }
 }
 
