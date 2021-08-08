@@ -967,6 +967,9 @@ main {
   line-height: 16px;
   margin-bottom: 8px;
 }
+.form-panel__part__content__form-row.address-wrapper {
+  margin-bottom: 0;
+}
 .form-panel__part__content__form-row.name-wrapper {
   display: grid;
   grid-template-columns: minmax(auto, 133px) auto;
@@ -1039,7 +1042,8 @@ main {
   .form-panel__part__content.delivery-content {
     display: grid;
     grid-template-columns: 5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 60px 60px;
+    grid-gap: 24px;
     grid-template-areas: "standard ." "dhl .";
   }
   .form-panel__part__content__form-row.name-wrapper, .form-panel__part__content__form-row.address-wrapper {
@@ -1053,6 +1057,9 @@ main {
   .form-panel__part__content__form-row.card-name-wrapper, .form-panel__part__content__form-row.card-number-wrapper {
     grid-template-columns: 2fr 1fr;
     grid-gap: 30px;
+  }
+  .form-panel__part__content__form-row.delivery-wrapper {
+    margin-bottom: 0;
   }
   .form-panel__part__content__form-row.delivery-wrapper:nth-child(1) {
     grid-area: standard;

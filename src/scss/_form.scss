@@ -61,6 +61,9 @@
             margin-bottom: 8px;
           }
         }
+        &.address-wrapper {
+          margin-bottom: 0;
+        }
         // 位置grid
         &.name-wrapper {
           display: grid;
@@ -144,7 +147,8 @@
         &.delivery-content {
           display: grid;
           grid-template-columns: 5fr 1fr;
-          grid-template-rows: 1fr 1fr;
+          grid-template-rows: 60px 60px;
+          grid-gap: 24px;
           grid-template-areas:
             'standard .'
             'dhl .';
@@ -165,6 +169,7 @@
             grid-gap: 30px;
           }
           &.delivery-wrapper {
+            margin-bottom: 0;
             &:nth-child(1) {
               grid-area: standard;
             }
