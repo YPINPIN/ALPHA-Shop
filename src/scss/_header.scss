@@ -27,3 +27,10 @@ header {
     }
   }
 }
+
+/********* Header 桌機版樣式 *********/
+@media screen and (min-width: 376px) {
+  header {
+    height: 60px;
+  }
+}

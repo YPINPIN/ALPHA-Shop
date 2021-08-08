@@ -797,8 +797,14 @@ header .navbar__brand {
   height: 24px;
 }
 
+/********* Header 桌機版樣式 *********/
+@media screen and (min-width: 376px) {
+  header {
+    height: 60px;
+  }
+}
 main {
-  margin-top: 56px;
+  padding-top: 56px;
   padding-bottom: 40px;
 }
 
@@ -1041,6 +1047,7 @@ main {
 /********* Form 桌機版樣式 *********/
 @media screen and (min-width: 376px) {
   .form-panel__part__content.delivery-content {
+    margin-bottom: 80px;
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 60px 60px;
@@ -1058,6 +1065,9 @@ main {
   .form-panel__part__content__form-row.card-name-wrapper, .form-panel__part__content__form-row.card-number-wrapper {
     grid-template-columns: 2fr 1fr;
     grid-gap: 30px;
+  }
+  .form-panel__part__content__form-row.card-code-wrapper {
+    margin-bottom: 0;
   }
   .form-panel__part__content__form-row.delivery-wrapper {
     margin-bottom: 0;
@@ -1157,6 +1167,9 @@ main {
 
 /********* Cart 桌機版樣式 *********/
 @media screen and (min-width: 376px) {
+  .cart {
+    margin-top: 80px;
+  }
   .cart .cart-panel {
     padding: 0 24px;
     padding-top: 32px;
@@ -1179,7 +1192,6 @@ main {
   }
   .cart .cart-panel__delivery, .cart .cart-panel__total {
     margin: 32px 0;
-    padding-top: 32px;
   }
 }
 /*BtnControl*/
@@ -1233,6 +1245,30 @@ main {
 @media screen and (min-width: 376px) {
   .btn-control-panel__btn-prev, .btn-control-panel__btn-next {
     max-width: 174px;
+  }
+}
+/********* main 桌機版樣式 *********/
+@media screen and (min-width: 376px) {
+  main {
+    padding-top: 136px;
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(300px, 6fr) minmax(auto, 100px) minmax(410px, 5fr);
+    grid-template-rows: 32px auto auto auto 32px;
+    grid-template-areas: "stepper . cart" "stepper . cart" "form-panel . cart" "btn-control . cart" "btn-control . .";
+  }
+  main section.container.stepper {
+    grid-area: stepper;
+  }
+  main section.container.form-panel {
+    grid-area: form-panel;
+  }
+  main section.container.cart {
+    grid-area: cart;
+  }
+  main section.container.btn-control {
+    grid-area: btn-control;
   }
 }
 
