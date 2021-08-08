@@ -752,6 +752,22 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.form-panel select, .form-panel input {
+  padding: 8px 12px;
+  border: 1px solid #4a4a4a;
+  border-radius: 4px;
+  line-height: 16px;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: normal;
+  color: #2a2a2a;
+  font-family: "Noto Sans TC";
+  cursor: pointer;
+}
+.form-panel select::placeholder, .form-panel input::placeholder {
+  color: #999999;
+}
+
 /*Header*/
 /*Header css*/
 header {
@@ -790,7 +806,7 @@ main {
 }
 
 /*Stepper*/
-/*Steeper css*/
+/*Stepper css*/
 .stepper {
   padding-top: 16px;
 }
@@ -874,8 +890,8 @@ main {
   background-color: #2a2a2a;
 }
 
-/********* 桌機版樣式 *********/
-@media screen and (min-width: 375px) {
+/********* Stepper 桌機版樣式 *********/
+@media screen and (min-width: 374px) {
   .stepper-panel__step__label {
     margin-left: 0.5rem;
     display: inline;
@@ -885,6 +901,164 @@ main {
   }
   .stepper-panel__step.checked .stepper-panel__step__label, .stepper-panel__step.active .stepper-panel__step__label {
     color: #2a2a2a;
+  }
+}
+/*Form*/
+/*Form css*/
+.form-panel {
+  padding-top: 24px;
+}
+.form-panel input {
+  width: 100%;
+}
+.form-panel input[type=radio] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.form-panel input[type=radio]:checked {
+  box-shadow: inset 0 0 0 6px #2a2a2a;
+  border: none;
+}
+.form-panel select {
+  -webkit-appearance: none;
+  width: 100%;
+}
+.form-panel select:invalid {
+  color: #999999;
+}
+.form-panel .select-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+.form-panel .select-wrapper::after {
+  content: "";
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #2a2a2a transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.form-panel__part__form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2a2a2a;
+  font-family: "Noto Sans TC";
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.form-panel__part__content__form-row {
+  margin-bottom: 24px;
+}
+.form-panel__part__content__form-row__input > label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #808080;
+  font-family: "Noto Sans TC";
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+.form-panel__part__content__form-row.name-wrapper {
+  display: grid;
+  grid-template-columns: minmax(auto, 133px) auto;
+  grid-gap: 30px;
+}
+.form-panel__part__content__form-row.contact-wrapper, .form-panel__part__content__form-row.address-wrapper, .form-panel__part__content__form-row.card-name-wrapper, .form-panel__part__content__form-row.card-number-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+.form-panel__part__content__form-row.card-code-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.form-panel__part__content__form-row.delivery-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(auto, 60px) 1fr minmax(auto, 60px);
+  grid-template-rows: 60px;
+  align-items: center;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #f0f0f5;
+  border-radius: 4px;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery:hover::after {
+  border: 1px solid #afb1bd;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery:checked::after {
+  border: 1px solid #2a2a2a;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery > label {
+  padding: 11px 0;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  font-family: "Inter";
+  line-height: 20px;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery__time {
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  font-family: "Inter";
+  line-height: 16px;
+}
+.form-panel__part__content__form-row.delivery-wrapper .input-delivery__price {
+  align-self: start;
+  justify-self: end;
+  padding-top: 13px;
+  padding-right: 20px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  font-family: "Inter";
+  line-height: 16px;
+}
+
+/********* Form 桌機版樣式 *********/
+@media screen and (min-width: 374px) {
+  .form-panel__part__content.delivery-content {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "standard ." "dhl .";
+  }
+  .form-panel__part__content__form-row.name-wrapper, .form-panel__part__content__form-row.address-wrapper {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+  }
+  .form-panel__part__content__form-row.contact-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  .form-panel__part__content__form-row.card-name-wrapper, .form-panel__part__content__form-row.card-number-wrapper {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+  }
+  .form-panel__part__content__form-row.delivery-wrapper:nth-child(1) {
+    grid-area: standard;
+  }
+  .form-panel__part__content__form-row.delivery-wrapper:nth-child(2) {
+    grid-area: dhl;
   }
 }
 

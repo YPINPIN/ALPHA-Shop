@@ -152,13 +152,6 @@ body {
   cursor: pointer;
 }
 
-%position-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @mixin font-setting(
   $size: 1rem,
   $weight: normal,
@@ -169,4 +162,24 @@ body {
   font-weight: $weight;
   color: $color;
   font-family: $family;
+}
+
+%position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%input-style {
+  padding: 8px 12px;
+  border: 1px solid $form-input-border-color;
+  border-radius: 4px;
+  line-height: 16px;
+  background-color: transparent;
+  @include font-setting(12px, normal);
+  cursor: pointer;
+  &::placeholder {
+    color: $form-placeholder-color;
+  }
 }

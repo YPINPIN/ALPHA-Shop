@@ -61,9 +61,9 @@
           <div class="form-panel__part">
             <div class="form-panel__part__form-title">寄送地址</div>
             <div class="form-panel__part__content">
-              <div class="form-panel__part__content__form-row">
+              <div class="form-panel__part__content__form-row name-wrapper">
                 <div
-                  class="form-panel__part__content__form-row__input-appellation"
+                  class="form-panel__part__content__form-row__input appellation"
                 >
                   <label>稱謂</label>
                   <div class="select-wrapper">
@@ -74,7 +74,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="form-panel__part__content__form-row__input-name">
+                <div class="form-panel__part__content__form-row__input name">
                   <label>姓名</label>
                   <input
                     type="text"
@@ -85,8 +85,8 @@
                   />
                 </div>
               </div>
-              <div class="form-panel__part__content__form-row">
-                <div class="form-panel__part__content__form-row__input-phone">
+              <div class="form-panel__part__content__form-row contact-wrapper">
+                <div class="form-panel__part__content__form-row__input phone">
                   <label>電話</label>
                   <input
                     type="tel"
@@ -96,7 +96,7 @@
                     required
                   />
                 </div>
-                <div class="form-panel__part__content__form-row__input-mail">
+                <div class="form-panel__part__content__form-row__input mail">
                   <label>Email</label>
                   <input
                     type="email"
@@ -107,8 +107,8 @@
                   />
                 </div>
               </div>
-              <div class="form-panel__part__content__form-row">
-                <div class="form-panel__part__content__form-row__input-city">
+              <div class="form-panel__part__content__form-row address-wrapper">
+                <div class="form-panel__part__content__form-row__input city">
                   <label>縣市</label>
                   <div class="select-wrapper">
                     <select name="city" id="city" required>
@@ -117,7 +117,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="form-panel__part__content__form-row__input-address">
+                <div class="form-panel__part__content__form-row__input address">
                   <label>地址</label>
                   <input
                     type="text"
@@ -130,10 +130,12 @@
               </div>
             </div>
           </div>
-          <div class="form-panel__part">
+          <div class="form-panel__part d-none">
             <div class="form-panel__part__form-title">運送方式</div>
-            <div class="form-panel__part__content">
-              <div class="form-panel__part__content__form-row d-flex">
+            <div class="form-panel__part__content delivery-content">
+              <div
+                class="form-panel__part__content__form-row delivery-wrapper"
+              >
                 <input
                   type="radio"
                   name="delivery"
@@ -141,13 +143,15 @@
                   class="input-delivery delivery-standard"
                   value="0"
                 />
-                <label for="delivery-standard" class="">
+                <label>
                   <p class="input-delivery__title">標準運送</p>
                   <p class="input-delivery__time">約 3~7 個工作天</p>
                 </label>
-                <span class="input-delivery__price">免費</span>
+                <label class="input-delivery__price">免費</label>
               </div>
-              <div class="form-panel__part__content__form-row d-flex">
+              <div
+                class="form-panel__part__content__form-row delivery-wrapper"
+              >
                 <input
                   type="radio"
                   name="delivery"
@@ -155,20 +159,22 @@
                   class="input-delivery delivery-dhl"
                   value="0"
                 />
-                <label for="delivery-dhl" class="">
+                <label>
                   <p class="input-delivery__title">DHL 貨運</p>
                   <p class="input-delivery__time">48 小時內送達</p>
                 </label>
-                <span class="input-delivery__price">$500</span>
+                <label class="input-delivery__price">$500</span>
               </div>
             </div>
           </div>
-          <div class="form-panel__part">
+          <div class="form-panel__part d-none">
             <div class="form-panel__part__form-title">付款資訊</div>
             <div class="form-panel__part__content">
-              <div class="form-panel__part__content__form-row">
+              <div
+                class="form-panel__part__content__form-row card-name-wrapper"
+              >
                 <div
-                  class="form-panel__part__content__form-row__input-card-name"
+                  class="form-panel__part__content__form-row__input card-name"
                 >
                   <label>持卡人姓名</label>
                   <input
@@ -180,9 +186,11 @@
                   />
                 </div>
               </div>
-              <div class="form-panel__part__content__form-row">
+              <div
+                class="form-panel__part__content__form-row card-number-wrapper"
+              >
                 <div
-                  class="form-panel__part__content__form-row__input-card-number"
+                  class="form-panel__part__content__form-row__input card-number"
                 >
                   <label>卡號</label>
                   <input
@@ -196,10 +204,13 @@
                   />
                 </div>
               </div>
-              <div class="form-panel__part__content__form-row d-flex">
+              <div
+                class="form-panel__part__content__form-row card-code-wrapper"
+              >
                 <div
                   class="
-                    form-panel__part__content__form-row__input-card-expiration
+                    form-panel__part__content__form-row__input
+                    card-expiration
                   "
                 >
                   <label>有效期限</label>
@@ -212,7 +223,7 @@
                   />
                 </div>
                 <div
-                  class="form-panel__part__content__form-row__input-card-code"
+                  class="form-panel__part__content__form-row__input card-code"
                 >
                   <label>CVC / CCV </label>
                   <input

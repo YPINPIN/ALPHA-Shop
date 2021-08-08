@@ -1,4 +1,4 @@
-/*Steeper css*/
+/*Stepper css*/
 // 建立步驟數字
 @mixin getStepNums($num) {
   @for $i from 1 through $num {
@@ -79,8 +79,8 @@
   }
 }
 
-/********* 桌機版樣式 *********/
-@media screen and (min-width: 375px) {
+/********* Stepper 桌機版樣式 *********/
+@media screen and (min-width: 374px) {
   .stepper-panel {
     &__step {
       // 步驟文字
