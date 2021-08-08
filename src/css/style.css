@@ -891,7 +891,7 @@ main {
 }
 
 /********* Stepper 桌機版樣式 *********/
-@media screen and (min-width: 374px) {
+@media screen and (min-width: 376px) {
   .stepper-panel__step__label {
     margin-left: 0.5rem;
     display: inline;
@@ -1038,7 +1038,7 @@ main {
 }
 
 /********* Form 桌機版樣式 *********/
-@media screen and (min-width: 374px) {
+@media screen and (min-width: 376px) {
   .form-panel__part__content.delivery-content {
     display: grid;
     grid-template-columns: 5fr 1fr;
@@ -1066,6 +1066,119 @@ main {
   }
   .form-panel__part__content__form-row.delivery-wrapper:nth-child(2) {
     grid-area: dhl;
+  }
+}
+/*Cart*/
+/*Cart css*/
+.cart {
+  margin-top: 32px;
+}
+.cart .cart-panel {
+  width: 100%;
+  border: 1px solid #f0f0f5;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 0 16px;
+}
+.cart .cart-panel__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a2a2a;
+  font-family: "Noto Sans TC";
+  line-height: 22px;
+  margin-bottom: 34px;
+  display: none;
+}
+.cart .cart-panel__product-list__product {
+  margin: 18px 0;
+  height: 100px;
+}
+.cart .cart-panel__product-list__product__left-content {
+  height: 100%;
+  max-width: 100px;
+}
+.cart .cart-panel__product-list__product__left-content img {
+  border-radius: 4px;
+}
+.cart .cart-panel__product-list__product__right-content {
+  text-align: right;
+}
+.cart .cart-panel__product-list__product__right-content__info-wrapper {
+  margin-bottom: 18px;
+}
+.cart .cart-panel__product-list__product__right-content__info-wrapper__title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #2a2a2a;
+  font-family: "Noto Sans TC";
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+.cart .cart-panel__product-list__product__right-content__info-wrapper__count-wrapper {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  font-family: "Inter";
+}
+.cart .cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-minus, .cart .cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__btn-add {
+  background-color: #f0f0f5;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+}
+.cart .cart-panel__product-list__product__right-content__info-wrapper__count-wrapper__count {
+  margin: 0 20px;
+}
+.cart .cart-panel__product-list__product__right-content__price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  font-family: "Nunito Sans";
+  line-height: 22px;
+}
+.cart .cart-panel__delivery, .cart .cart-panel__total {
+  margin: 16px 0;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f5;
+}
+.cart .cart-panel__delivery__title, .cart .cart-panel__total__title {
+  font-size: 14px;
+  font-weight: normal;
+  color: #2a2a2a;
+  font-family: "Noto Sans TC";
+}
+.cart .cart-panel__delivery__value, .cart .cart-panel__total__value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  font-family: "Nunito Sans";
+}
+
+/********* Cart 桌機版樣式 *********/
+@media screen and (min-width: 376px) {
+  .cart .cart-panel {
+    padding: 0 24px;
+    padding-top: 32px;
+  }
+  .cart .cart-panel__title {
+    display: block;
+  }
+  .cart .cart-panel__product-list__product {
+    margin: 34px 0;
+  }
+  .cart .cart-panel__product-list__product__right-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 21px;
+    height: 100%;
+  }
+  .cart .cart-panel__product-list__product__right-content__info-wrapper {
+    text-align: left;
+  }
+  .cart .cart-panel__delivery, .cart .cart-panel__total {
+    margin: 32px 0;
+    padding-top: 32px;
   }
 }
 
