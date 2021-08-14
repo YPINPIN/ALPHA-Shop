@@ -178,7 +178,6 @@ body {
   line-height: 16px;
   background-color: transparent;
   @include font-setting(12px, normal);
-  cursor: pointer;
   &::placeholder {
     color: $form-placeholder-color;
   }

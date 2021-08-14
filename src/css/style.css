@@ -762,7 +762,6 @@ body {
   font-weight: normal;
   color: #2a2a2a;
   font-family: "Noto Sans TC";
-  cursor: pointer;
 }
 .form-panel select::placeholder, .form-panel input::placeholder {
   color: #999999;
@@ -920,6 +919,7 @@ main {
 }
 .form-panel input[type=radio] {
   -webkit-appearance: none;
+  cursor: pointer;
   width: 20px;
   height: 20px;
   padding: 0;
@@ -932,6 +932,7 @@ main {
   border: none;
 }
 .form-panel select {
+  cursor: pointer;
   -webkit-appearance: none;
   width: 100%;
 }
