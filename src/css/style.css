@@ -1254,6 +1254,64 @@ main {
     visibility: hidden;
   }
 }
+/*Footer*/
+/*Footer css*/
+footer {
+  display: none;
+  height: 284px;
+  background-color: #e5e5e5;
+}
+footer .wrapper {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+footer .wrapper > section {
+  flex: 1 1;
+  margin-top: 64px;
+}
+footer .wrapper > section:first-child {
+  margin-top: 126px;
+}
+footer .wrapper a {
+  display: block;
+}
+footer .wrapper .footer__brand {
+  width: 136px;
+  height: 24px;
+}
+footer .wrapper .footer__title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2a2a2a;
+  font-family: "Noto Sans TC";
+  line-height: 24px;
+}
+footer .wrapper .footer__item {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #808080;
+  font-family: "Noto Sans TC";
+  line-height: 17px;
+}
+footer .wrapper .footer__social-media {
+  display: flex;
+}
+footer .wrapper .footer__social-media__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: block;
+  }
+}
 /********* main 桌機版樣式 *********/
 @media screen and (min-width: 768px) {
   main {

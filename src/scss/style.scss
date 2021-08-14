@@ -26,6 +26,9 @@ main {
 /*BtnControl*/
 @import './btnControl';
 
+/*Footer*/
+@import './footer';
+
 /********* main 桌機版樣式 *********/
 @media screen and (min-width: 768px) {
   main {
