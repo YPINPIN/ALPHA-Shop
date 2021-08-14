@@ -1047,7 +1047,7 @@ main {
 /********* Form 桌機版樣式 *********/
 @media screen and (min-width: 768px) {
   .form-panel__part__content.delivery-content {
-    margin-bottom: 80px;
+    margin-bottom: 78px;
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 60px 60px;
