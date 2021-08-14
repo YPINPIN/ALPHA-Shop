@@ -27,7 +27,7 @@ main {
 @import './btnControl';
 
 /********* main 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 768px) {
   main {
     padding-top: 136px;
     width: 85%;

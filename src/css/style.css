@@ -1045,7 +1045,7 @@ main {
 }
 
 /********* Form 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 768px) {
   .form-panel__part__content.delivery-content {
     margin-bottom: 80px;
     display: grid;
@@ -1166,10 +1166,7 @@ main {
 }
 
 /********* Cart 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
-  .cart {
-    margin-top: 80px;
-  }
+@media screen and (min-width: 576px) {
   .cart .cart-panel {
     padding: 0 24px;
     padding-top: 32px;
@@ -1192,6 +1189,11 @@ main {
   }
   .cart .cart-panel__delivery, .cart .cart-panel__total {
     margin: 32px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    margin-top: 80px;
   }
 }
 /*BtnControl*/
@@ -1242,7 +1244,7 @@ main {
 }
 
 /********* BtnControl 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 576px) {
   .btn-control-panel__btn-prev, .btn-control-panel__btn-next {
     max-width: 174px;
   }
@@ -1252,7 +1254,7 @@ main {
   }
 }
 /********* main 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 768px) {
   main {
     padding-top: 136px;
     width: 85%;

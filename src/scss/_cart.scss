@@ -78,9 +78,8 @@
 }
 
 /********* Cart 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 576px) {
   .cart {
-    margin-top: 80px;
     .cart-panel {
       padding: 0 24px;
       padding-top: 32px;
@@ -112,5 +111,11 @@
         margin: 32px 0;
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cart {
+    margin-top: 80px;
   }
 }
