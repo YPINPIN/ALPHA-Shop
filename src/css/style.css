@@ -789,25 +789,55 @@ header .navbar__hamburger {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
+  cursor: pointer;
   width: 24px;
   height: 24px;
 }
-header .navbar__nav-list {
-  display: none;
+header .navbar__toggle:checked ~ .navbar__nav-list {
+  transition: transform 0.3s ease-out;
+  transform: scale(1, 1);
 }
-header .navbar__nav-list__item, header .navbar__nav-list__item:active {
+header .navbar__toggle:checked ~ .navbar__nav-list > .navbar__nav-list__item {
+  opacity: 1;
+}
+header .navbar__nav-list {
+  position: absolute;
+  top: 56px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 2px 2px rgba(42, 42, 42, 0.1);
+  transform-origin: top;
+  transform: scale(1, 0);
+}
+header .navbar__nav-list__item {
+  height: 72px;
+  border-top: 1px solid rgba(42, 42, 42, 0.1);
+  margin: 0 14.5px;
+  transition: opacity 0.2s ease-out 0.15s;
+  opacity: 0;
+}
+header .navbar__nav-list__link, header .navbar__nav-list__link:active {
   font-size: 16px;
   font-weight: normal;
   color: #2a2a2a;
   font-family: "Noto Sans TC";
-  line-height: 24px;
+  line-height: 72px;
 }
 header .navbar__brand {
   width: 136px;
   height: 24px;
 }
 header .navbar__tool-list {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 72px;
+  margin: 0 auto;
+}
+header .navbar__tool-list__item {
+  width: 24px;
+  height: 24px;
 }
 
 /********* Header 桌機版樣式 *********/
@@ -818,20 +848,29 @@ header .navbar__tool-list {
   header .navbar {
     width: 85%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .navbar__left {
-    width: 34%;
   }
   header .navbar__hamburger {
     display: none;
   }
   header .navbar__nav-list {
-    flex: 1 1;
+    position: static;
+    top: 0;
     display: flex;
-    justify-content: space-between;
+    box-shadow: none;
+    transform: scale(1, 1);
+  }
+  header .navbar__nav-list__item {
+    height: 60px;
+    border-top: none;
+    margin: 0 auto;
+    opacity: 1;
+    flex: 0.1 1;
+  }
+  header .navbar__nav-list__item:last-child {
+    flex: 1 1;
+  }
+  header .navbar__nav-list__link, header .navbar__nav-list__link:active {
+    line-height: 60px;
   }
   header .navbar__brand {
     position: absolute;
@@ -840,14 +879,13 @@ header .navbar__tool-list {
     transform: translate(-50%, -50%);
   }
   header .navbar__tool-list {
-    flex: 1 1;
-    display: flex;
+    position: absolute;
+    right: 0;
     justify-content: flex-end;
-    width: 132px;
+    width: auto;
+    height: 60px;
   }
   header .navbar__tool-list__item {
-    width: 24px;
-    height: 24px;
     margin-left: 32px;
   }
 }

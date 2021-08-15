@@ -18,15 +18,36 @@ header {
       top: 50%;
       left: 15px;
       transform: translateY(-50%);
+      cursor: pointer;
       width: 24px;
       height: 24px;
     }
+    &__toggle:checked ~ .navbar__nav-list {
+      transition: transform 0.3s ease-out;
+      transform: scale(1, 1);
+      > .navbar__nav-list__item {
+        opacity: 1;
+      }
+    }
     &__nav-list {
-      display: none;
-      &__item,
-      &__item:active {
+      position: absolute;
+      top: 56px;
+      width: 100%;
+      background: $white;
+      box-shadow: 0 2px 2px 2px $nav-divider-color;
+      transform-origin: top;
+      transform: scale(1, 0);
+      &__item {
+        height: 72px;
+        border-top: 1px solid $nav-divider-color;
+        margin: 0 14.5px;
+        transition: opacity 0.2s ease-out 0.15s;
+        opacity: 0;
+      }
+      &__link,
+      &__link:active {
         @include font-setting(16px);
-        line-height: 24px;
+        line-height: 72px;
       }
     }
     &__brand {
@@ -35,17 +56,21 @@ header {
       height: 24px;
     }
     &__tool-list {
-      display: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+      height: 72px;
+      margin: 0 auto;
+      &__item {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
 
 /********* Header 桌機版樣式 *********/
-@media screen and (min-width: 376px) {
-  header {
-    // height: 60px;
-  }
-}
 
 @media screen and (min-width: 768px) {
   header {
@@ -53,19 +78,29 @@ header {
     .navbar {
       width: 85%;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      &__left {
-        width: 34%;
-      }
       &__hamburger {
         display: none;
       }
       &__nav-list {
-        flex: 1 1;
+        position: static;
+        top: 0;
         display: flex;
-        justify-content: space-between;
+        box-shadow: none;
+        transform: scale(1, 1);
+        &__item {
+          height: 60px;
+          border-top: none;
+          margin: 0 auto;
+          opacity: 1;
+          flex: 0.1 1;
+        }
+        &__item:last-child {
+          flex: 1 1;
+        }
+        &__link,
+        &__link:active {
+          line-height: 60px;
+        }
       }
       &__brand {
         position: absolute;
@@ -74,13 +109,12 @@ header {
         transform: translate(-50%, -50%);
       }
       &__tool-list {
-        flex: 1 1;
-        display: flex;
+        position: absolute;
+        right: 0;
         justify-content: flex-end;
-        width: 132px;
+        width: auto;
+        height: 60px;
         &__item {
-          width: 24px;
-          height: 24px;
           margin-left: 32px;
         }
       }
