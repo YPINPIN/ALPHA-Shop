@@ -26,6 +26,11 @@ https://ypinpin.github.io/ALPHA-Shop/
 - 「上一步」和「下一步」按鈕 、桌機板微調： 約 2 小時
 - javascript 相關功能： 約 1.5 小時
 
+> 8/15
+
+- 針對 input hover 跟 breakpoint 設定進行修正了。
+- 新增完成「導覽列」和「footer」。
+
 ## 環境建置
 
 - [Visual Studio Code](https://code.visualstudio.com/)
