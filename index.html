@@ -16,23 +16,45 @@
   <body>
     <header>
       <nav class="navbar">
-        <label class="navbar__toggle-label" for="navbar__toggle">
-          <img
-            src="./src/image/nav/bx_bx-menu-alt-left@2x.png"
-            alt=""
-            class="navbar__hamburger d-inline"
+        <section class="navbar__left">
+          <label class="navbar__toggle-label" for="navbar__toggle">
+            <img
+              src="./src/image/nav/bx_bx-menu-alt-left@2x.png"
+              alt=""
+              class="navbar__hamburger"
+            />
+          </label>
+          <input
+            type="checkbox"
+            id="navbar__toggle"
+            class="navbar__toggle d-none"
           />
-        </label>
-        <input
-          type="checkbox"
-          id="navbar__toggle"
-          class="navbar__toggle d-none"
-        />
-        <img
-          src="./src/image/nav/Logo@2x.png"
-          alt=""
-          class="navbar__brand d-inline"
-        />
+          <section class="navbar__nav-list">
+            <a href="#" class="navbar__nav-list__item">男款</a>
+            <a href="#" class="navbar__nav-list__item">女款</a>
+            <a href="#" class="navbar__nav-list__item">最新消息</a>
+            <a href="#" class="navbar__nav-list__item">客製商品</a>
+            <a href="#" class="navbar__nav-list__item">聯絡我們</a>
+          </section>
+        </section>
+        <section>
+          <img
+            src="./src/image/nav/Logo@2x.png"
+            alt=""
+            class="navbar__brand"
+          />
+        </section>
+        <section class="navbar__tool-list">
+          <a href="#">
+            <img src="./src/image/nav/search@2x.png" alt="" class="navbar__tool-list__item">
+          </a>
+          <a href="#">
+            <img src="./src/image/nav/cart@2x.png" alt="" class="navbar__tool-list__item">
+          </a>
+          <a href="#">
+            <img src="./src/image/nav/mode@2x.png" alt="" class="navbar__tool-list__item">
+          </a>
+        </section>
       </nav>
     </header>
 
